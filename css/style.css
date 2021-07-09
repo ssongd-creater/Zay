@@ -1,0 +1,36 @@
+/* Top Bar Style Code */
+.top_bar{background:#212934; padding:20px 0; font-size:11px}
+.top_bar .center{display:flex; justify-content: space-between;}
+.top_bar a{color:#cfd6e1; font-size:11px}
+.top_bar a, .top_bar a i{margin-right:3px;}
+.top_bar em{font-style:normal;}
+.top_bar ul{display: flex;}
+.top_bar ul i.fa{font-size:13px; margin:0 0 0 10px;}
+
+/* Header Style Code */
+header{box-shadow: 0 0 8px #ccc;padding:20px 0; transition: all 0.4s;}
+header .center{display:flex; justify-content: space-between; align-items: center;}
+header .logo a{color:#59ab6e; font-size:40px; font-weight: 500; transition: all 0.4s;}
+
+header .gnb{display: flex; font-size:18px; font-weight: 300; transition: all 0.4s;}
+header .gnb li{margin:0 50px;}
+header .gnb a{color:#212529;}
+
+header .login_info{display: flex; align-items: center;}
+header .login_info a{padding:0 15px; color:#212529; font-weight: 400;}
+header .login_info a:nth-child(2){border-left:1px solid #212529}
+header .login_info a:nth-child(3){padding-right: 0;}
+header .login_info img{width:30px;}
+
+header.stick{padding:12px 0; z-index:9999; background:#fff;}
+header.stick .logo a{font-size:35px;}
+header.stick .gnb{font-size:16px;}
+
+/* Slider Section Style Code */
+.slider{width:100%; _height: 40vh; background: #efefef; padding:0;}
+.slider .center{display: flex; justify-content: space-between; align-items: center; max-width:1230px;}
+.slider .slider_txt h2{font-size:50px; font-weight: 100;}
+.slider .slider_txt h4{font-size:30px; font-weight: 300;}
+.slider .slider_txt p{font-size: 18px; font-weight: 300; margin-top:10px;}
+.slider .center .slider_img{height: 60vh;}
+.slider .center .slider_img img{height:100%;}

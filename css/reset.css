@@ -1,0 +1,18 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* Remove Default Style */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: #212529;}
+ol,ul {list-style: none;}
+img {display: block;}
+input,button,textarea {outline: 0; border-radius: 0;}
+textarea{resize:none;}
+
+/* Setting Reset Layout Style */
+.center{width:100%; margin:auto; max-width:1230px; height: auto;}
+@media screen and (max-width:1230px){.center{padding:0 30px;}}
+.wrap{width:100%; height: auto;}
+.clearfix:after {content: "";display: block;clear: both;}
+body {font-family: 'Roboto', 'Noto Sans KR', sans-serif; font-size: 14px; height: 3000px;}
+section{padding:50px 0;}
