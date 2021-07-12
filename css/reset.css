@@ -15,4 +15,10 @@ textarea{resize:none;}
 .wrap{width:100%; height: auto;}
 .clearfix:after {content: "";display: block;clear: both;}
 body {font-family: 'Roboto', 'Noto Sans KR', sans-serif; font-size: 14px; height: 3000px;}
-section{padding:50px 0;}
+section{padding:80px 0;}
+
+/* Common Elements Style Code */
+/* Title text */
+.tit_box{width:100%; height: auto; display: flex; align-items: center; flex-direction: column; padding:0 0 50px 0;}
+.tit_box h2{font-size: 50px; font-weight: 200; margin:0 0 20px 0;}
+.tit_box p{font-size: 18px; font-weight: 300; text-align: center;}

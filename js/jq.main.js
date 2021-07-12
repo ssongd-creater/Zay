@@ -14,7 +14,7 @@ $(function () {
         });
         $("header").addClass("stick");
       } else {
-        $("header").css({ position: "static" });
+        $("header").css({ position: "relative" });
         $("header").removeClass("stick");
       }
     });
@@ -23,11 +23,29 @@ $(function () {
   headerStick();
 
   //Light Slider Function Code
-  $(".slider").lightSlider({
-    item: 1,
-    controls: true,
-    prevHtml: '<i class="fa fa-angle-left"></i>',
-    nextHtml: '<i class="fa fa-angle-right"></i>',
-  });
+  const slider = function () {
+    $(".slider").lightSlider({
+      item: 1,
+      controls: true,
+      prevHtml: '<i class="fa fa-angle-left"></i>',
+      nextHtml: '<i class="fa fa-angle-right"></i>',
 
+      speed: 400, //ms'
+      auto: true,
+      loop: true,
+      pause: 4000,
+      easing: 'linear'
+    });
+  };
+  slider();
+
+
+  $(".mobile_menu").click(function () {
+    $(this).toggleClass("on");
+    if ($(this).hasClass("on")) {
+      $(".menu_items").slideDown(250);
+    } else {
+      $(".menu_items").slideUp(250);
+    }
+  });
 });

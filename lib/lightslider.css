@@ -82,27 +82,42 @@
     margin: 10px 0 0;
     padding: 0;
     text-align: center;
+    bottom: 50px;
 }
 .lSSlideOuter .lSPager.lSpg > li {
     cursor: pointer;
     display: inline-block;
-    padding: 0 5px;
+    margin: 0 3px;
+    position: relative;
+    width:40px;
+    height: 3px;
+    background: #fff;
 }
 .lSSlideOuter .lSPager.lSpg > li a {
-    background-color: #222222;
+    background-color: #fff;
     border-radius: 30px;
     display: inline-block;
-    height: 8px;
+    height: 3px;
     overflow: hidden;
     text-indent: -999em;
-    width: 8px;
-    position: relative;
+    width: 40px;
+    position: absolute;
+    left:0;
     z-index: 99;
     -webkit-transition: all 0.5s linear 0s;
     transition: all 0.5s linear 0s;
 }
+
+.lSSlideOuter .lSPager.lSpg > li.active a{
+    animation:fill-bar 4s 1;
+}
+
+@keyframes fill-bar{
+    0%{width:0;}
+    100%{width:100%;}
+}
 .lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
-    background-color: #428bca;
+    background-color: #59ab6e;
 }
 .lSSlideOuter .media {
     opacity: 0.8;
