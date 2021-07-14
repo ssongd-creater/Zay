@@ -6,7 +6,8 @@
 a {text-decoration: none; color: #212529;}
 ol,ul {list-style: none;}
 img {display: block;}
-input,button,textarea {outline: 0; border-radius: 0;}
+input,button,textarea {outline: 0; border-radius: 0; border:0; padding:10px; color:#777;}
+input::placeholder{color:#ccc;}
 textarea{resize:none;}
 
 /* Setting Reset Layout Style */
@@ -14,7 +15,7 @@ textarea{resize:none;}
 @media screen and (max-width:1230px){.center{padding:0 30px;}}
 .wrap{width:100%; height: auto;}
 .clearfix:after {content: "";display: block;clear: both;}
-body {font-family: 'Roboto', 'Noto Sans KR', sans-serif; font-size: 14px; height: 3000px;}
+body {font-family: 'Roboto', 'Noto Sans KR', sans-serif; font-size: 14px; _height: 3000px;}
 section{padding:80px 0;}
 
 /* Common Elements Style Code */

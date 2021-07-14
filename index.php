@@ -118,6 +118,7 @@
       </div>
     </section>
     <!-- End of Categories Section -->
+    <?php include $_SERVER['DOCUMENT_ROOT']."/zay/include/footer.php"?>
   </div>
 
 <!-- jQuery Framework Load -->

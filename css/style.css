@@ -56,3 +56,39 @@ header.stick .gnb{font-size:16px;}
 
 .categories .cate_item h3{font-size:18px; margin:15px 0;}
 .categories .cate_item a{background:#59ab6e; color:#fff;padding:12px 25px;}
+
+/* Footer Section Style Code */
+footer{width:100%; height: auto; background:#212934; color:#cfd6e1;padding:80px 0 0 0;}
+footer .sub_menus{display: flex;}
+footer .sub_menus>div{width:33.33%;}
+footer ul{padding:20px 0;}
+footer a{color:#cfd6e1; font-size:16px; font-weight:300; line-height: 2em;}
+footer a i{margin-right:10px;}
+
+footer h3{font-size:30px; font-weight: 500; color:#cfd6e1; padding:0 0 20px 0; border-bottom:1px solid #2d343f;}
+footer>.center div.shop h3{color:#59ab6e;}
+
+footer .company_info{background:#1d242d;}
+footer .company_info p{font-size:16px; font-weight: 300; padding:20px 0;}
+
+/* Join Page Style Code */
+section.join .form_box{width:100%; height:auto; display: flex; align-items: center; justify-content: center;}
+section.join .form_box .mem_form,
+section.join .form_box .login_form{background:#efefef; width:50%; padding:20px; border-radius: 10px; box-shadow:0 0 3px #ccc;}
+
+section.join .mem_form p,
+section.join .login_form p {width:100%; height:auto; display: flex; margin:0 0 5px 0; justify-content: space-between;}
+section.join .mem_form label,
+section.join .login_form label{width:30%; padding:10px 20px; background:#59ab6e;color:#fff; text-align: center;}
+section.join .mem_form p:first-child input{width:calc(50% - 10px);}
+section.join .mem_form p:first-child button{width:20%; background:#59ab6e; color:#fff;}
+
+section.join .mem_form input,
+section.join .login_form input{width:calc(70% - 5px);}
+
+section.join .mem_form .submit_info,
+section.join .login_form .submit_info{display: flex; justify-content: space-between; padding:10px 0 0 0; border-top:1px solid #ddd;margin-top:20px; align-items: center;}
+section.join .mem_form .submit_info button,
+section.join .login_form .submit_info button{background:#59ab6e; color:#fff; padding:10px 30px;}
+section.join .submit_info span{color:#555;}
+section.join .submit_info span a{display: inline-block; padding:10px 20px; background:#59ab6e; color:#fff;margin-left:5px;}

@@ -15,10 +15,13 @@
   .slider .center{flex-direction: column;}
   .slider .slider_txt{text-align: center;}
   .slider .center .slider_img{height: 40vh;}
+
+  section.join .form_box .mem_form,
+  section.join .form_box .login_form{width:70%;}
 }
 
 @media screen and (max-width:850px){
-  .center{padding:0 50px;}
+  .center{padding:0 20px;}
 
   .tit_box h2{font-size: 35px;}
   .tit_box p{font-size: 16px;}
@@ -37,6 +40,16 @@
   .slider .slider_txt h2{font-size: 35px;}
   .slider .slider_txt h4{font-size: 18px;}
   .slider .slider_txt p{font-size:14px;}
+
+  footer .sub_menus{flex-wrap: wrap;}
+  footer .sub_menus>div{width:100%;}
+
+  section.join .form_box .mem_form,
+  section.join .form_box .login_form{width:100%; max-width: 1230px;}
+  section.join .mem_form label,
+  section.join .login_form label{font-size:12px; padding:10px 15px;}
+  section.join .mem_form p:first-child button{font-size:12px;}
+
 }
 
 @media screen and (max-width:500px){
@@ -46,15 +59,49 @@
   .top_bar .contact_info{display: none;}
   .top_bar a, .top_bar a i{margin:0; padding:0 10px;}
   .top_bar .center{justify-content: center;}
-
+  
+  header{padding:12px 0;}
   header .logo a{font-size:28px;}
   header .gnb a{font-size:14px;}
+
+  header.stick{padding:12px 0;}
+  header.stick .logo a{font-size:28px;}
 
   .slider .center .slider_img{height:30vh;}
   .slider .slider_txt p{display: none;}
 
   .categories .cate_box{flex-wrap: wrap;}
   .categories .cate_box .cate_item{width:100%; margin:0 0 20px 0;}
+
+  footer h3{font-size:25px; padding:0 0 10px 0;}
+  footer a{font-size:14px;}
+  footer .company_info{text-align: center;}
+  footer .company_info p{font-size:14px;}
+
+  section.join .mem_form label,
+  section.join .login_form label{display: none;}
+
+  section.join .mem_form p:first-child input{width:calc(60% - 5px);}
+  section.join .mem_form p:first-child button{width:40%;}
+
+  section.join .mem_form input,
+  section.join .login_form input{width:100%;}
+
+  section.join .mem_form p:nth-child(4) {flex-wrap: wrap;}
+  section.join .mem_form p:nth-child(4) label{display:block; width:100%;}
 }
 
+@media screen and (max-width:350px){
+  section.join .mem_form p:first-child{flex-wrap: wrap;}
+  section.join .mem_form p:first-child input{width:100%;}
+  section.join .mem_form p:first-child button{width:100%; margin-top:5px;}
+
+  section.join .mem_form .submit_info,
+  section.join .login_form .submit_info{flex-wrap: wrap;}
+  section.join .mem_form .submit_info button,
+  section.join .login_form .submit_info button{width:100%;}
+  section.join .mem_form .submit_info span,
+  section.join .login_form .submit_info span{width:100%; text-align: right; margin-top:5px;}
+  section.join .submit_info span a {padding: 5px 15px;}
+}
 
