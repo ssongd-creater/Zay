@@ -29,7 +29,7 @@
 
 <section class="pro_insert">
     <div class="center">
-      <form action="/zay/php/product_insert.php" method="post" class="pro_insert_form" name="pro_insert_form">
+      <form action="/zay/php/product_insert.php" method="post" class="pro_insert_form" name="pro_insert_form" enctype="multipart/form-data">
       <p>
         <select name="pro_select" id="">
           <option value="watches">watches</option>

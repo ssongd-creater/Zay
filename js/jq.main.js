@@ -24,13 +24,47 @@ $(function () {
 
   
 
+  //Slide down and up when mobile menu click
+  const barsClick = function () {
+    $(".mobile_menu").click(function () {
+      $(this).toggleClass("on");
+      if ($(this).hasClass("on")) {
+        $(".menu_items").slideDown(250);
+      } else {
+        $(".menu_items").slideUp(250);
+      }
+    });
+  }
+  barsClick();
 
-  $(".mobile_menu").click(function () {
-    $(this).toggleClass("on");
-    if ($(this).hasClass("on")) {
-      $(".menu_items").slideDown(250);
-    } else {
-      $(".menu_items").slideUp(250);
+  //Index page description text cut
+  const cuttingText = function () {
+    //console.log($(".featured_item").length);
+    for (let i = 0; i < $(".featured_item").length; i++){
+      const textLength = $(".featured_item").eq(i).find("p.desc").text();
+      //console.log(textLength);
+
+      $(".featured_item").eq(i).find("p.desc").text(textLength.substr(0, 50) + "...");
     }
-  });
+  }
+
+  cuttingText();
+
+  const loadMore = function () {
+    $(".featured_item").hide();
+    $(".featured_item").slice(0, 3).show();
+    //slice를 0번부터 3개를 보여주는 것
+
+    $(".load_more button").click(function () {
+      $(".featured_item:hidden").slice(0, 3).show();
+    });
+  }
+
+  loadMore();
+
+
+
+
+
+
 });

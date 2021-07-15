@@ -21,16 +21,16 @@
   <!-- Media Style CSS Link -->
   <link rel="stylesheet" href="/zay/css/media.css">
 
-  
-
-
 </head>
 <body>
   
 
   <div class="wrap">
 
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/zay/include/header.php";?>
+    <?php
+    include $_SERVER["DOCUMENT_ROOT"]."/zay/include/header.php";
+    include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php";
+    ?>
     
     <!-- slider Landing Section -->
     <section class="slider">
@@ -87,37 +87,89 @@
           <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt<br>mollit anim id est laborum.</p>
         </div>
         <div class="cate_box">
+          <?php
+            //상품 카테고리 분류 배열 local에 이름
+            $cate_arr = array('watches','shoes','accessories');
+
+            for($i = 0; $i < count($cate_arr); $i++){
+              $sql = "SELECT * FROM zay_pro WHERE ZAY_pro_cate='{$cate_arr[$i]}' ORDER BY ZAY_pro_idx DESC LIMIT 1";
+
+              $cate_result = mysqli_query($dbConn,$sql);
+              $cate_result_row = mysqli_fetch_array($cate_result);
+              //cate_result를 배열로 빼오는 것
+              $cate_img = $cate_result_row['ZAY_pro_img_01'];
+              $cate_tit = $cate_result_row['ZAY_pro_cate'];
+              //cate_result_row의 배열 중 이미지와 카테고리 값만 저장
+          ?>
           <!-- Loop of Cate Item -->
           <div class="cate_item">
             <div class="cate_img">
-              <img src="/zay/img/category_img_01.jpg" alt="">
+              <img src="/zay/data/product_imgs/<?=$cate_img?>" alt="">
             </div>
-            <h3>Watches</h3>
+            <h3><?=$cate_tit?></h3>
+            <!-- 변수로 불러온 img와 tit를 넣어줌 -->
             <a href="#" class="main_btn">Go Shop</a>
           </div>
           <!-- End of Loop of Cate Item -->
-          <!-- Loop of Cate Item -->
-          <div class="cate_item">
-            <div class="cate_img">
-              <img src="/zay/img/category_img_02.jpg" alt="">
-            </div>
-            <h3>Shoes</h3>
-            <a href="#" class="main_btn">Go Shop</a>
-          </div>
-          <!-- End of Loop of Cate Item -->
-          <!-- Loop of Cate Item -->
-          <div class="cate_item">
-            <div class="cate_img">
-              <img src="/zay/img/category_img_03.jpg" alt="">
-            </div>
-            <h3>Accessories</h3>
-            <a href="#" class="main_btn">Go Shop</a>
-          </div>
-          <!-- End of Loop of Cate Item -->
+          <?php
+          }
+          ?>
         </div>
       </div>
     </section>
     <!-- End of Categories Section -->
+    <!-- Featured Product Section -->
+    <section class="featured">
+      <div class="center">
+        <div class="tit_box">
+          <h2>Featured Product</h2>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt<br>mollit anim id est laborum.</p>
+        </div>
+        <div class="featured_box">
+          <?php
+            $sql1 = "SELECT * FROM zay_pro ORDER BY ZAY_pro_idx DESC";
+            $pro_result = mysqli_query($dbConn,$sql1);
+
+            while($pro_row = mysqli_fetch_array($pro_result)){
+              $pro_row_idx = $pro_row['ZAY_pro_idx'];
+              $pro_row_img = $pro_row['ZAY_pro_img_01'];
+              $pro_row_tit = $pro_row['ZAY_pro_name'];
+              $pro_row_desc = $pro_row['ZAY_pro_desc'];
+              $pro_row_pri = $pro_row['ZAY_pro_pri'];
+          ?>
+          <!-- Featured Loop Item -->
+          <div class="featured_item">
+            <div class="item_frame">
+              <div class="featured_img">
+                <img src="/zay/data/product_imgs/<?=$pro_row_img?>" alt="">
+              </div>
+              <div class="like_unlike">
+                <div class="like_icons">
+                  <span>좋아요 | <b>20</b></span>
+                  <span>별로예요 | <b>1</b></span>
+                </div>
+                
+                <p><i class="fa fa-krw"></i><?=$pro_row_pri?></p>
+              </div>
+              <div class="featured_txt">
+                <h3><?=$pro_row_tit?></h3>
+                <p class="desc"><?=$pro_row_desc?></p>
+              </div>
+              <div class="reviews">
+                <em>Comments(12)</em>
+              </div>
+            </div>
+          </div>
+          <!-- End of Featured Loop Item -->
+          <?php
+          };
+          ?>
+        </div>
+        <div class="load_more">
+          <button type="button">더보기</button>
+        </div>
+      </div>
+    </section>
     <?php include $_SERVER['DOCUMENT_ROOT']."/zay/include/footer.php"?>
   </div>
 
