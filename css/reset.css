@@ -17,6 +17,8 @@ textarea{resize:none;}
 .clearfix:after {content: "";display: block;clear: both;}
 body {font-family: 'Roboto', 'Noto Sans KR', sans-serif; font-size: 14px; _height: 3000px;}
 section{padding:80px 0;}
+em{font-style: normal;}
+b{font-weight: normal;}
 
 /* Common Elements Style Code */
 /* Title text */

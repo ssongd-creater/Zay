@@ -140,9 +140,11 @@
           <!-- Featured Loop Item -->
           <div class="featured_item">
             <div class="item_frame">
-              <div class="featured_img">
-                <img src="/zay/data/product_imgs/<?=$pro_row_img?>" alt="">
-              </div>
+              <a href="/zay/pages/details/pro_detail_form.php?pro_idx=<?=$pro_row_idx?>">
+                <div class="featured_img">
+                  <img src="/zay/data/product_imgs/<?=$pro_row_img?>" alt="">
+                </div>
+              </a>
               <div class="like_unlike">
                 <div class="like_icons">
                   <span>좋아요 | <b>20</b></span>

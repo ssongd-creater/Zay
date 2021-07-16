@@ -57,14 +57,43 @@ $(function () {
 
     $(".load_more button").click(function () {
       $(".featured_item:hidden").slice(0, 3).show();
+      if ($(".featured_item:hidden").length == 0) { //hidden된 갯수가 0이면
+        $(".load_more").html(`<a href=#>전체보기</a>`); //문자열이 아니라 백팁을 쓴다. load_more에 html이 바뀌는것
+      }
     });
   }
 
   loadMore();
 
+  //featured item images height fit to responsive width
+  const imgHeightFit = function () {
+    const featuredImgWidth = $(".featured_img").outerWidth();
+    $(".featured_img").outerHeight(featuredImgWidth);
+    //.featured_img의 가로값을 변수로 지정을 하여 세로값 파라미터 값으로 넣어 가로값과 세로값이 같아진다.
 
+    $(window).resize(function () {
+      const featuredImgWidth = $(".featured_img").outerWidth();
+      $(".featured_img").outerHeight(featuredImgWidth);
+    });
+    //resize할때 사이즈 조정해줌
 
+  };
+ 
+  imgHeightFit();
 
+  // detail page image tabs function
+  const detailTabs = function () {
+    $(".detail_tab_btns span").click(function () {
+      const index = $(this).index(); //.detail_tab_btns span의 인덱스값을 읽어옴
+      $(".detail_img>img").hide();
+      $(".detail_img>img").eq(index).show();
+    });
 
+    $(".detail_tab_btns span").eq(0).trigger("click");
+    //첫번째 0번 span을 강제 클릭해주는 것
+
+  };
+  
+  detailTabs();
 
 });
