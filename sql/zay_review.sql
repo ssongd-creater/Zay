@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- 생성 시간: 21-07-16 08:32
+-- 생성 시간: 21-07-19 03:33
 -- 서버 버전: 10.4.19-MariaDB
 -- PHP 버전: 7.3.28
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `zay_review` (
   `ZAY_pro_rev_idx` int(11) NOT NULL COMMENT '상품평 고유번호',
+  `ZAY_pro_rev_id` varchar(30) CHARACTER SET utf8 NOT NULL COMMENT '상품평 작성자',
   `ZAY_pro_rev_con_idx` int(11) NOT NULL COMMENT '상품평 대상 상품 번호',
   `ZAY_pro_rev_txt` text CHARACTER SET utf8 NOT NULL COMMENT '상품평 내용',
   `ZAY_pro_rev_reg` varchar(50) NOT NULL COMMENT '상품평 입력일'

@@ -157,8 +157,14 @@
                 <h3><?=$pro_row_tit?></h3>
                 <p class="desc"><?=$pro_row_desc?></p>
               </div>
+              <?php
+              $sql2 = "SELECT * FROM zay_review WHERE ZAY_pro_rev_con_idx=$pro_row_idx";
+
+              $rev_num_sql = mysqli_query($dbConn,$sql2);
+              $rev_total=mysqli_num_rows($rev_num_sql);
+              ?>
               <div class="reviews">
-                <em>Comments(12)</em>
+                <em>Comments (<?=$rev_total?>)</em>
               </div>
             </div>
           </div>
