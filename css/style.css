@@ -66,9 +66,9 @@ header.stick .gnb{font-size:16px;}
 .featured .featured_item img{width:100%;}
 .featured .featured_item em{font-style: normal; font-size:12px; color:#777;}
 .like_unlike{width:100%; height: auto; display: flex; justify-content: space-between; padding:10px 0;}
-.like_unlike span{border:1px solid #eee; padding:5px 10px;font-size:11px; font-weight: normal;}
-.like_unlike span:nth-child(1){background:#59ab6e;color:#fff;}
-.like_unlike span:nth-child(2){background:#dd4545; color:#fff;}
+.like_unlike span{border:1px solid #eee; padding:5px 10px;font-size:11px; font-weight: normal; margin:0 2px; cursor: pointer;}
+/* .like_unlike span:nth-child(1){background:#59ab6e;color:#fff;} */
+/* .like_unlike span:nth-child(2){background:#dd4545; color:#fff;} */
 .featured .featured_txt{width:100%; color:#212529;}
 .featured .featured_txt h3{font-size:18px; font-weight: 400; padding-top:10px;}
 .featured .featured_txt p{font-size:14px; font-weight: 300;padding:10px 0;}
