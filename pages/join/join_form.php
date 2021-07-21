@@ -32,8 +32,8 @@
         <form action="/zay/php/insert_mem.php" method="post" name="mem_form" enctype="multipart/form-data" class="mem_form com_form"
         >
           <p>
-            <label>아이디</label><input type="text" name="mem_id" placeholder="아이디">
-            <button type="button">중복체크</button>
+            <label>아이디</label><input type="text" name="mem_id" placeholder="아이디" id="mem_id">
+            <button type="button" class="id_check">중복체크</button>
           </p>
           <p>
             <label>비밀번호</label><input type="password" name="mem_pass" autocomplete="off" placeholder="비밀번호">
@@ -66,12 +66,38 @@
 </div>
   <!-- jQuery Framework Load -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+
+      $(".id_check").click(function(){
+        const id_val = $("#mem_id").val();
+        $.ajax({
+          url : "/zay/php/id_check.php",
+          type : 'get',
+          data : {id_val : id_val},
+          success : function(data){
+            alert(data);
+          }
+        });
+      });
+    });
+  </script>
   <script src="/zay/js/jq.main.js"></script>
   <script>
 
+    
     const submitBtn = document.querySelector("#submit_btn");
+    const id_check = document.querySelector(".id_check");
+    let check = false;
+
+    id_check.addEventListener('click', function(){
+      check = true;
+    });
+   
+   
 
     submitBtn.addEventListener('click', function(){
+       console.log(check);
       if(!document.mem_form.mem_id.value){
         alert(' 아이디를 입력해 주세요');
         document.mem_form.mem_id.focus();
@@ -114,6 +140,11 @@
       if(!document.mem_form.mem_email.value){
         alert(' 이메일을 입력해 주세요');
         document.mem_form.mem_email.focus();
+        return;
+      }
+
+      if(!check){
+        alert('아이디 중복체크를 눌러주세요.');
         return;
       }
 

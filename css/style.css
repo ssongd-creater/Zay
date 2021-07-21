@@ -161,3 +161,16 @@ section.pro_insert{background: #e9eef5;}
 
 .comments .comments_text button{background:#59ab6e; color:#fff; padding:5px 15px;}
 .comments .comments_text button.rev_send{display:none;}
+
+/* Community Page Style Code */
+.community .comm_table{width:80%; margin:auto; background: #efefef; padding:20px;border-radius: 10px;;}
+.community .comm_table li{padding:5px;display: flex;}
+.community .comm_table li span{text-align: center;}
+.community .comm_table li span:nth-child(1){width:10%;}
+.community .comm_table li span:nth-child(2){width:15%;}
+.community .comm_table li span:nth-child(3){width:50%;}
+.community .comm_table li span:nth-child(4){width:15%;}
+.community .comm_table li span:nth-child(5){width:10%;}
+.community .comm_table li.comm_tit{background:#59ab6e; color:#fff;}
+.community .comm_table li.comm_con{border-bottom: 1px solid #fff;;}
+.community .comm_table li.comm_con span:nth-child(3){text-align: left; padding-left:15px;}

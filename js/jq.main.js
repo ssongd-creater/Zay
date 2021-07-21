@@ -96,4 +96,24 @@ $(function () {
   
   detailTabs();
 
+
+  function detailFit() {
+    const imgHeight = $(".detail_img_item").outerHeight();
+    const btnHeight = $(".detail_tab_btns").outerHeight();
+    $(".detail_img").height(imgHeight + btnHeight);
+  }
+  
+
+  
+  $(window).resize(function () {
+    setTimeout(function () {
+      detailFit();
+    },150);
+  });//쓰로틀링이라고 하는건데, 윈도우 사이즈 리사이즈 할때마다 1px씩 조정이되서 인터넷에 부담이됨. 그래서 setTimeout함수로 지정된 시간만큼 딜레이를 줘서 부담을 줄여줌, 스크롤 할때나 사이즈 조정시 많이 사용
+
+  detailFit();
+
+
+
+
 });

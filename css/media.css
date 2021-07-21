@@ -57,6 +57,15 @@
 
   .featured .featured_box .featured_item{width:50%; padding:10px;}
 
+  .pro_insert .detail_contents{flex-wrap: wrap;}
+  .pro_insert .detail_contents .detail_img {width:80%; margin:0 auto 20px auto;}
+  .pro_insert .detail_txt{width:100%;}
+  .pro_insert .size_quan p{font-size:15px;}
+  .pro_insert .size_quan p span{font-size:12px; margin:0 2px;}
+
+  .comments .comment_insert textarea{width:70%; height: 60%;}
+  .comments .comment_insert form button{width:30%; padding:0;}
+
 }
 
 @media screen and (max-width:500px){
@@ -98,6 +107,12 @@
   section.join .mem_form p:nth-child(4) label{display:block; width:100%;}
 
   .featured .featured_box .featured_item{width:100%;}
+
+  .pro_insert .detail_contents .detail_img{width:100%;}
+  .pro_insert .size_quan .size{flex-wrap: wrap;}
+  .pro_insert .size_quan p {width:100%;}
+  .pro_insert .size_quan p span{margin:0 5px;}
+  .pro_insert .detail_btns button{font-size:12px;}
 }
 
 @media screen and (max-width:350px){
