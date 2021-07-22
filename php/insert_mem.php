@@ -1,6 +1,22 @@
 <?php
 
   $mem_id = $_POST['mem_id'];
+
+  include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php";
+  $sql_check = "SELECT * FROM zay_mem WHERE ZAY_mem_id='{$mem_id}'";
+
+  $check_result = mysqli_query($dbConn,$sql_check);
+  $is_check = mysqli_num_rows($check_result);
+
+  //echo $is_check;
+  if($is_check > 0){
+     echo"
+    <script>
+      alert('이미 가입된 회원입니다.');
+      history.go(-1);
+    </script>
+    ";
+  }else{
   $mem_pass = $_POST['mem_pass'];
   $mem_name = $_POST['mem_name'];
   $mem_email = $_POST['mem_email'];
@@ -41,4 +57,6 @@
   //echo $mem_id, $mem_pass, $mem_pf, $mem_name, $mem_email;
 
   mysqli_query($dbConn, $sql);
+  }
+  
 ?>
