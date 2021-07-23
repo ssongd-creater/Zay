@@ -31,34 +31,9 @@
       </div>
       <div class="comm_table comm_center">
         <ul class="comm_row">
-          <li class="comm_tit">
-            <span>번호</span>
-            <span>아이디</span>
-            <span>제목</span>
-            <span>등록일</span>
-            <span>조회수</span>
-          </li>
+          
 
-          <?php
-            include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php";
-            $sql = "SELECT * FROM zay_comm ORDER BY ZAY_comm_idx DESC LIMIT 5";
-
-            $comm_result = mysqli_query($dbConn,$sql);
-           while($comm_row = mysqli_fetch_array($comm_result)){
-             $comm_idx = $comm_row['ZAY_comm_idx'];
-             $comm_id = $comm_row['ZAY_comm_id'];
-             $comm_tit = $comm_row['ZAY_comm_tit'];
-             $comm_reg = $comm_row['ZAY_comm_reg'];
-             $comm_hit = $comm_row['ZAY_comm_hit'];
-          ?>
-          <li class="comm_con">
-            <span><?=$comm_idx?></span>
-            <span><?=$comm_id?></span>
-            <span><?=$comm_tit?></span>
-            <span><?=$comm_reg?></span>
-            <span><?=$comm_hit?></span>
-          </li>
-          <?php }?>
+          <!-- ajax elements load here -->
         </ul>
       </div>
       <!-- End of comm_table -->
@@ -75,8 +50,8 @@
         </div>  
 
         <div class="paging">
-          <span><i class="fa fa-angle-double-left"></i></span>
-          <span><i class="fa fa-angle-left"></i></span>
+          <span class="angle-double first"><i class="fa fa-angle-double-left"></i></span>
+          <span class="prev angle"><i class="fa fa-angle-left"></i></span>
 
           <?php
           include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php";
@@ -95,11 +70,11 @@
 
           for($i = 1; $i<= $total_page; $i++){ //i가 1인이유는 1페이지부터 시작해서이기 때문
           ?>
-          <span class="num"><?=$i?></span>
+          <span class="num" onClick="getPage(<?=$i?>)"><?=$i?></span>
 
           <?php } ?>
-          <span><i class="fa fa-angle-right"></i></span>
-          <span><i class="fa fa-angle-double-right"></i></span>
+          <span class="next angle"><i class="fa fa-angle-right"></i></span>
+          <span class="angle-double last"><i class="fa fa-angle-double-right"></i></span>
         </div>
       </div>
       <!-- End of search paging -->
@@ -123,6 +98,7 @@
           <?php }?>
         </div>
       </div>
+      <!-- End of Write -->
     </div>
   </section>
 
@@ -132,6 +108,7 @@
   <!-- jQuery Framework Load -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="/zay/js/jq.main.js"></script>
+  <script src="/zay/js/jq.comm_ajax.js"></script>
   <script>
     function plzLogin(){
       alert('로그인 후 이용해 주세요.');

@@ -181,6 +181,7 @@ section.pro_insert{background: #e9eef5;}
 .community .paging{display: flex;}
 .community .paging span{width:30px; height:30px; background:#59ab6e; color:#fff;font-size:16px; margin-left:5px; display:flex; justify-content: center; align-items: center; border-radius: 5px; border:1px solid #59ab6e;}
 .community .paging span.num{background:#fff; color:#59ab6e; font-size:14px;}
+.community .paging span.num.active{background:#59ab6e; color:#fff;}
 
 .community .search_form{display: flex;}
 .community .search_form select{border:1px solid #59ab6e; background:#38914e; color:#fff; outline:0; border-radius:5px 0 0 5px; padding:0 10px;height: 30px;}
@@ -198,4 +199,5 @@ section.pro_insert{background: #e9eef5;}
 .community .write_con textarea{width:100%; height:150px;font-family: 'Roboto', 'Noto Sans KR', sans-serif; font-size:14px;}
 .community .write_con textarea::placeholder{color:#ccc;}
 .community .write_btn{width:100%; height:auto; margin-top:10px; text-align:center;}
-.community .write_btn button{background: #59ab6e; color:#fff; padding:8px 25px; border-radius: 5px;}
+.community .write_btn button,
+.community .write_btn a{background: #59ab6e; color:#fff; padding:8px 25px; border-radius: 5px;}
