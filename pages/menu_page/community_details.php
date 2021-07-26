@@ -75,36 +75,82 @@
     </div>
   </section>
 
+  <section class="comments">
+    <div class="center">
+      <div class="comments_tit">
+        <?php
+          $sql2 = "SELECT * FROM zay_reply WHERE ZAY_comm_reply_idx=$detail_idx";
+          $reply_result = mysqli_query($dbConn, $sql2);
+          $reply_total = mysqli_num_rows($reply_result);
+        ?>
+        <span>답글</span> |
+        <span><em><?=$reply_total?></em> Replies</span>
+      </div>
+
+      <div class="comment_insert">
+        <form action="/zay/php/reply_insert.php?detail_idx=<?=$detail_idx?>" method="post" name="reply_form">
+          <textarea type="text" placeholder="답글을 입력해 주세요." name="reply_txt"></textarea>
+          <?php if(!$userid){ ?>
+          <button type="button" onclick="plzLogin()">입력</button>
+          <?php } else { ?>
+          <button type="button" onclick="insertTxt()">입력</button>
+          <?php } ?>
+        </form>
+      </div>
+      <!-- End of comment_insert -->
+      <div class="comment_contents">
+        <!-- Loop Comment -->
+        <div class="loop_contents">
+          <div class="comments_tit">
+            <span>test2</span> |
+            <span>2021-07-26</span>
+          </div>
+          <form action="#" method="post">
+            <div class="comments_text">
+              <em class="rev_txt">첫 댓글입니다.</em>
+              <textarea class="rev_update_txt" name="rev_update_txt">첫 댓글입니다.</textarea>
+              <!-- 수정/삭제를 하기 위해 form태그 안에 넣어준다 -->
+            
+              <span class="comments_btns">
+                <button type="submit" class="rev_send">보내기</button>
+                <button type="button" class="rev_update">수정</button>
+                <button type="button" class="rev_delete" value="">삭제</button>
+                <input type="hidden" value="">
+                <!-- form태그안에 submit은 하나밖에 못씀 삭제는 a태그로 사용하는게 좋음 -->
+              </span>
+            </div>
+          </form>
+        </div>
+        <!-- End of Loop Comment -->
+      </div>
+    </div>
+  </section>
+
   <?php include $_SERVER['DOCUMENT_ROOT']."/zay/include/footer.php"?>
   
 
   <!-- jQuery Framework Load -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="/zay/js/jq.main.js"></script>
-  <script>
+  <!-- <script>
     const upBtn = document.querySelector("#update");
     upBtn.addEventListener("click",function(){
       document.write_form.submit();
     });
-  </script>
+  </script> -->
   <script>
     function plzLogin(){
       alert('로그인 후 이용해 주세요.');
       return false; //로그인 창으로 뜨게 설정해도됨 location.href();
     };
 
-    function sendWrite(){
-      if(!document.write_form.write_input.value){
-        alert('제목을 입력해 주세요.');
+    function insertTxt(){
+      if(!document.reply_form.reply_txt.value){
+        alert('답글을 입력해 주세요.');
         return;
       }
-
-      if(!document.write_form.write_con.value){
-        alert('내용을 입력해 주세요.');
-        return;
-      }
-      document.write_form.submit();
-    };
+      document.reply_form.submit();
+    }
   </script>
 
 </body>

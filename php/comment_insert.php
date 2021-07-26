@@ -12,5 +12,6 @@
  mysqli_query($dbConn,$sql);
 
  header("Location:/zay/pages/details/pro_detail_form.php?pro_idx=$pro_idx");
+ //대상에 submit과 동시에 반영해준다
 
 ?>

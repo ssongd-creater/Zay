@@ -172,6 +172,7 @@
           ?>
         </form>
       </div>
+      <!-- End of comment_insert -->
       <div class="comment_contents">
         <?php
           while ($rev_row = mysqli_fetch_array($rev_result)){

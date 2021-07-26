@@ -163,7 +163,8 @@ section.pro_insert{background: #e9eef5;}
 .comments .comments_text button.rev_send{display:none;}
 
 /* Community Page Style Code */
-.community .comm_center{width:80%; margin:auto;}
+.comm_center{width:80%; margin:auto;}
+
 .community .comm_table{background: #efefef; padding:20px;border-radius: 10px;;}
 .community .comm_table li{padding:5px;display: flex;}
 .community .comm_table li span{text-align: center;}
