@@ -45,12 +45,12 @@
   <!-- Header Section -->
   <header>
     <div class="center">
-      <h2 class="logo"><a href="#">Zay</a></h2>
+      <h2 class="logo"><a href="/zay/index.php">Zay</a></h2>
       <div class="menu_items">
         <ul class="gnb">
         <li><a href="/zay/index.php">Home</a></li>
         <li><a href="/zay/pages/admin/product_insert_form.php">About</a></li>
-        <li><a href="#">Shop</a></li>
+        <li><a href="/zay/pages/menu_page/shop.php">Shop</a></li>
         <li><a href="/zay/pages/menu_page/community_form.php">Community</a></li>
       </ul>
         <div class="login_info">
