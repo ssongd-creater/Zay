@@ -38,6 +38,10 @@
   $fetch_likes = mysqli_fetch_array($result1);
   $total_likes = $fetch_likes['totalLikes']; //좋아요 총 갯수
 
+  $total_sql = "UPDATE zay_pro SET ZAY_pro_like=$total_likes WHERE ZAY_pro_idx=$post_id";
+
+  mysqli_query($dbConn, $total_sql);
+
   //echo $total_likes;
   $sql2="SELECT COUNT(*) AS totalunLikes FROM zay_like_unlike WHERE ZAY_like_unlike_type=0 AND ZAY_like_unlike_postid=$post_id";
   $result2 = mysqli_query($dbConn, $sql2);

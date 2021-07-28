@@ -58,7 +58,7 @@ $(function () {
     $(".load_more button").click(function () {
       $(".featured_item:hidden").slice(0, 3).show();
       if ($(".featured_item:hidden").length == 0) { //hidden된 갯수가 0이면
-        $(".load_more").html(`<a href=#>전체보기</a>`); //문자열이 아니라 백팁을 쓴다. load_more에 html이 바뀌는것
+        $(".load_more").html(`<input type="hidden">`); //문자열이 아니라 백팁을 쓴다. load_more에 html이 바뀌는것
       }
     });
   }
@@ -96,7 +96,7 @@ $(function () {
   
   detailTabs();
 
-
+  //디테일 페이지 높이맞추기
   function detailFit() {
     const imgHeight = $(".detail_img_item").outerHeight();
     const btnHeight = $(".detail_tab_btns").outerHeight();
@@ -113,7 +113,20 @@ $(function () {
 
   detailFit();
 
+  // $("#price").click(function () {
+  //   $(this).toggleClass("on");
+  //   if ($(this).hasClass("on")) {
+  //     //$(this).text("높은가격순");
+  //     //$(this).find("i").attr('class','fa fa-chevron-up')
+  //     $(this).html('높은가격순 <i class="fa fa-chevron-up"></i>')
 
+  //     location.href = '/zay/pages/menu_page/shop.php?key=up_price';
 
+  //   } else {
+  //     //$(this).text("낮은가격순");
+  //     $(this).html('낮은가격순 <i class="fa fa-chevron-down"></i>')
+  //     location.href = '/zay/pages/menu_page/shop.php?key=down_price';
+  //   }
+  // })
 
 });

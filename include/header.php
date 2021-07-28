@@ -50,7 +50,7 @@
         <ul class="gnb">
         <li><a href="/zay/index.php">Home</a></li>
         <li><a href="/zay/pages/admin/product_insert_form.php">About</a></li>
-        <li><a href="/zay/pages/menu_page/shop.php">Shop</a></li>
+        <li><a href="/zay/pages/menu_page/shop.php?key=all">Shop</a></li>
         <li><a href="/zay/pages/menu_page/community_form.php">Community</a></li>
       </ul>
         <div class="login_info">

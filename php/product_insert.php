@@ -1,5 +1,5 @@
 <?php
-
+  $pro_like = 0;
   $pro_cate = $_POST['pro_select'];
   $pro_name = addslashes($_POST['pro_insert_name']); //addslashes 특수문자가 들어갈 때 오류를 잡아준다.
   $pro_pri = $_POST['pro_insert_pri'];
@@ -42,9 +42,9 @@
 
   include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php";
   $sql = "INSERT INTO zay_pro (
-    ZAY_pro_cate,ZAY_pro_name,ZAY_pro_pri,ZAY_pro_bran,ZAY_pro_desc,ZAY_pro_color,ZAY_pro_img_01,ZAY_pro_img_02,ZAY_pro_reg
+    ZAY_pro_like,ZAY_pro_cate,ZAY_pro_name,ZAY_pro_pri,ZAY_pro_bran,ZAY_pro_desc,ZAY_pro_color,ZAY_pro_img_01,ZAY_pro_img_02,ZAY_pro_reg
     ) VALUES (
-      '{$pro_cate}','{$pro_name}','{$pro_pri}','{$pro_bran}','{$pro_desc}','{$pro_color}','{$pro_img1_name}','{$pro_img2_name}','{$pro_reg}'
+      '{$pro_like}','{$pro_cate}','{$pro_name}','{$pro_pri}','{$pro_bran}','{$pro_desc}','{$pro_color}','{$pro_img1_name}','{$pro_img2_name}','{$pro_reg}'
     )";
 
     mysqli_query($dbConn,$sql);
