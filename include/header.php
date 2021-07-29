@@ -48,30 +48,29 @@
       <h2 class="logo"><a href="/zay/index.php">Zay</a></h2>
       <div class="menu_items">
         <ul class="gnb">
-        <li><a href="/zay/index.php">Home</a></li>
-        <li><a href="/zay/pages/admin/product_insert_form.php">About</a></li>
-        <li><a href="/zay/pages/menu_page/shop.php?key=all">Shop</a></li>
-        <li><a href="/zay/pages/menu_page/community_form.php">Community</a></li>
-      </ul>
+          <li><a href="/zay/index.php">Home</a></li>
+          <li><a href="/zay/pages/admin/product_insert_form.php">About</a></li>
+          <li><a href="/zay/pages/menu_page/shop.php?key=all">Shop</a></li>
+          <li><a href="/zay/pages/menu_page/community_form.php">Community</a></li>
+        </ul>
         <div class="login_info">
 
-          <?php
-            if(!$userid){
+          <?php if(!$userid){
           ?>
           <!-- 로그아웃 시 보여질 UI -->
           <a href="/zay/pages/join/login_form.php">로그인</a>
           <a href="/zay/pages/join/join_form.php">회원가입</a>
           <a href="#"><img src="/zay/img/default-user.png" alt=""></a>
-          <?php
-          }else{
-          ?>
+          <?php }else{ ?>
           <!-- 로그인 시 보여질 UI -->
             <a href="/zay/php/logout.php">로그아웃</a>
             <a href="#"><?=$userid?></a>
             <a href="#"><img src="/zay/data/profile/<?=$userprofile?>" alt=""></a>
-          <?php
-          }
-          ?>
+          <?php } ?>
+          <a href="/zay/pages/menu_page/cart_list.php" class="cart_btn">
+            <i class="fa fa-shopping-cart"></i>
+            <b>(2)</b>
+          </a>
           <!-- <a href="/zay/pages/login_form.php">로그인</a>  -->
           <!-- <a href="/zay/php/logout.php">로그아웃</a> 
           <a href="/zay/pages/join_form.php">회원가입</a>

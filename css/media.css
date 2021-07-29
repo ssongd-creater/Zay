@@ -9,8 +9,15 @@
 }
 
 @media screen and (max-width:1050px){
+  header .gnb{width:60%;}
   header .gnb li{margin:0 25px;}
   header .gnb a{font-size: 16px;}
+  header .login_info{width:40%;}
+  header .login_info a{font-size:12px;}
+
+  header .cart_btn{display: flex; align-items: center;}
+  header .cart_btn i{font-size:20px; color:#59ab6e;}
+  header .cart_btn b{font-size:14px; color:#59ab6e; padding-left:3px;}
 
   .slider .center{flex-direction: column;}
   .slider .slider_txt{text-align: center;}

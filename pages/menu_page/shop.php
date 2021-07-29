@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
     content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Zay shop || Shop</title>
+  <title>Zay shop || Products</title>
   <!-- Favicon Link -->
   <link rel="shortcut icon" href="/zay/img/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/zay/img/favicon.ico" type="image/x-icon">
@@ -40,16 +40,19 @@
           <div class="filters">
             <div class="filter_tabs">
               <select onchange="location.href=this.value">
-                <option selected disabled value="">검색조건</option>
+                <option selected disabled value="" id="select">검색조건</option>
                 <option value="?key=new">새상품순</option>
                 <option value="?key=like">좋아요순</option>
                 <option value="?key=price">가격순</option>
               </select>
             </div>
-            <div class="search">
-              <input type="text" style="border:1px solid;">
-              <i class="fa fa-search"></i>
-            </div>
+            <form action="/zay/pages/menu_page/shop_search_result.php" name="pro_search_form">
+              <div class="search">
+                <input type="text" placeholder="상품명 검색" name="pro_search">
+                <button type="button" id="search_btn"><i class="fa fa-search"></i></button>
+              </div>
+            </form>
+            
           </div>
         </div> 
         <!-- End of show btns -->
@@ -74,9 +77,12 @@
     //현재 주소를 변수에 지정해준 것, 주소를 판별해서 탭의 엑티브를 주려하는것
     //console.log(pathName);
     const btns = document.querySelectorAll(".shop .shop_btns a");
+    const filterSelect = document.querySelector('#select');
     //console.log(btns);
     const btnsArr = ['all','watches','shoes','accessories'];
     //key값으로 받고있는 애들을 배열로 저장해 줌
+    const filterEng=['new','like','price'];
+    const filterKor=['새상품순','좋아요순','가격순'];
 
     for(let i=0; i<btnsArr.length; i++){
       btns[i].classList.remove('active');
@@ -85,11 +91,27 @@
       }
     }
 
+    for(let i=0; i<filterEng.length; i++){
+     if(pathName.includes(filterEng[i])) {
+       filterSelect.innerText = filterKor[i];
+     }
+    }
+
     function plzLogin(){
       alert('로그인 후 이용해 주세요.');
       return false; //로그인 창으로 뜨게 설정해도됨 location.href();
     };
 
+    document.querySelector("#search_btn").onclick=function(){
+      if(!document.pro_search_form.pro_search.value){
+        alert("상품명을 입력해 주세요.");
+        document.pro_search_form.pro_search.focus();
+        return;
+      }
+
+      document.pro_search_form.submit();
+    }
+    
   </script>
 
 

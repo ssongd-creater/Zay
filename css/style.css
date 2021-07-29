@@ -18,7 +18,7 @@ header .gnb a{color:#212529;}
 
 header .menu_items{display: flex; align-items: center; justify-content: space-between; width:85%;}
 
-header .login_info{display: flex; align-items: center;}
+header .login_info{display: flex; align-items: center;width:30%;justify-content: flex-end;}
 header .login_info a{padding:0 15px; color:#555555; font-weight: 400;}
 header .login_info a:nth-child(2){border-left:1px solid #212529}
 header .login_info a:nth-child(3){padding-right: 0; width:30px; height:30px; overflow: hidden; border-radius: 50%; padding-left:0;}
@@ -205,5 +205,28 @@ section.pro_insert{background: #e9eef5;}
 
 /* Shop Page Style Code */
 .shop .shop_btns{width:100%; height:auto;display:flex; justify-content: space-between; padding:15px 0; border-bottom: 1px solid #eee;}
+.shop .shop_btns>div{width:50%;}
+.shop .shop_btns>div.filters{display:flex;justify-content: flex-end;align-items: center;}
+.shop .shop_btns>div.filters select{background:#59ab6e;color:#fff;height:100%;padding:10px;border:0;border-radius: 5px;}
+.shop .shop_btns>div.filters .search{display:flex;align-items: center;}
+.shop .shop_btns>div.filters input{border:1px solid #ccc; margin-left:5px;height: 35px;;}
+.shop .shop_btns>div.filters input:focus{border:1px solid #59ab6e;}
+.shop .shop_btns>div.filters button{width:40px; height: 35px; font-size:20px; border:1px solid #59ab6e;background:#59ab6e;color:#fff;border-radius: 5px;display: flex;justify-content: center;align-items: center;margin-left: 5px;}
+
 .shop .shop_btns a{background:#59ab6e; color:#fff; border-radius: 5px; padding:10px 25px; display: inline-block; border:1px solid #59ab6e;}
 .shop .shop_btns a.active{background:#fff; color:#59ab6e;}
+
+/* Shop Search Page Style Code */
+.pro_search .tit_box{border-bottom:1px solid #eee;}
+.pro_search .search_lists{padding:10px;}
+.pro_search .search_item{display:flex;border-bottom:1px solid #eee;}
+.pro_search span{width:20%; display:flex;align-items: center;justify-content: center;;}
+.pro_search span.search_img{padding:10px;}
+.pro_search span img{width:80%;}
+.pro_search span.search_txt{width:40%;flex-direction: column; justify-content: center; align-items: flex-start;padding:0 20px;}
+.pro_search span.search_txt h2{font-weight:400; color:#555;}
+.pro_search span.search_txt p{font-weight: 300; color:#555; margin-top:10px;}
+.pro_search span.search_txt h3{color:#555;}
+.pro_search span.search_txt h3 i{font-size:20px; color: #59ab6e;}
+.pro_search span.search_btns{flex-direction: column;justify-content: center;align-items: center;}
+.pro_search span.search_btns button{width:80%; margin:10px 0; background:#59ab6e; color:#fff; border-radius: 3px;}
