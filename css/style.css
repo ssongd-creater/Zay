@@ -223,10 +223,14 @@ section.pro_insert{background: #e9eef5;}
 .pro_search span{width:20%; display:flex;align-items: center;justify-content: center;;}
 .pro_search span.search_img{padding:10px;}
 .pro_search span img{width:80%;}
-.pro_search span.search_txt{width:40%;flex-direction: column; justify-content: center; align-items: flex-start;padding:0 20px;}
+.pro_search span.search_txt{width:40%;flex-direction: column; justify-content: center; align-items: flex-start;padding:20px;}
 .pro_search span.search_txt h2{font-weight:400; color:#555;}
 .pro_search span.search_txt p{font-weight: 300; color:#555; margin-top:10px;}
-.pro_search span.search_txt h3{color:#555;}
-.pro_search span.search_txt h3 i{font-size:20px; color: #59ab6e;}
+.pro_search span.search_pri h3{color:#555;}
+.pro_search span.search_pri i{font-size:20px; color: #59ab6e;}
 .pro_search span.search_btns{flex-direction: column;justify-content: center;align-items: center;}
+
+.pro_search span.search_txt h3.show_hide{display:none;}
 .pro_search span.search_btns button{width:80%; margin:10px 0; background:#59ab6e; color:#fff; border-radius: 3px;}
+
+.pro_search .total_pri{width:100%; height:auto; margin-top:10px; text-align: right;}

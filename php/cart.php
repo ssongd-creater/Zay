@@ -27,7 +27,7 @@
         }else{
           $count = count($_SESSION['cart']);
           //echo $count;
-          $_SESSION['cart'][$count]=array('cart_img' => $_POST['cart_img'],'cart_name' => $_POST['cart_name'],'cart_desc' => $_POST['cart_desc'],'cart_pri' => $_POST['cart_pri'],'cart_quan' => 1);
+          $_SESSION['cart'][$count]=array('cart_idx' => $_POST['cart_idx'],'cart_img' => $_POST['cart_img'],'cart_name' => $_POST['cart_name'],'cart_desc' => $_POST['cart_desc'],'cart_pri' => $_POST['cart_pri'],'cart_quan' => 1);
 
           echo"
             <script>
@@ -39,7 +39,7 @@
         };
 
       } else {
-        $_SESSION['cart'][0]=array('cart_img' => $_POST['cart_img'],'cart_name' => $_POST['cart_name'],'cart_desc' => $_POST['cart_desc'],'cart_pri' => $_POST['cart_pri'],'cart_quan' => 1);
+        $_SESSION['cart'][0]=array('cart_idx' => $_POST['cart_idx'],'cart_img' => $_POST['cart_img'],'cart_name' => $_POST['cart_name'],'cart_desc' => $_POST['cart_desc'],'cart_pri' => $_POST['cart_pri'],'cart_quan' => 1);
 
         echo "
           <script>
@@ -51,6 +51,24 @@
       //var_dump($_SESSION['cart']);
         //var_dump($addedItem);
 
+    } //end check post add_to_cart name
+
+    // start check remove_cart post data
+    if(isset($_POST['remove_cart'])){
+      foreach($_SESSION['cart'] as $key => $value){
+        if($value['cart_name'] == $_POST['cart_remove']){//추가된 카트 상품 정보 중 상품 이름이 cart_romove 버튼 클릭 시 넘어오는 cart_remove의(값이) post value와 같은지
+          unset($_SESSION['cart'][$key]);
+          $_SESSION['cart'] = array_values($_SESSION['cart']);
+
+          echo"
+          <script>
+            alert('카트에서 상품이 삭제되었습니다.');
+            history.go(-1);
+          </script>
+          ";
+        }
+      }
     }
+
   }
 ?>

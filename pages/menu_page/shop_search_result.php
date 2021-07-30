@@ -59,6 +59,7 @@
           <span class="search_txt">
             <h2><?=$result_name?></h2>
             <p><?=$result_desc?></p>
+            <h3 class="show_hide"><i class="fa fa-krw"></i><?=$result_pri?></h3>
           </span>
           <span class="search_pri">
             <h3><i class="fa fa-krw"></i><?=$result_pri?></h3>

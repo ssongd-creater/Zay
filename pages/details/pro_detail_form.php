@@ -132,6 +132,7 @@
                 <div class="detail_btns">
                   <button type="button">BUY NOW</button>
                   <button type="submit" name="add_to_cart">ADD TO CART</button>
+                  <input type="hidden" name="cart_idx" value="<?=$detail_idx?>">
                   <input type="hidden" name="cart_img" value="<?=$detail_img_1?>">
                   <input type="hidden" name="cart_name" value="<?=$detail_tit?>">
                   <input type="hidden" name="cart_desc" value="<?=$detail_desc?>">
