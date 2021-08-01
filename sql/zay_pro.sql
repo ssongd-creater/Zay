@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- 생성 시간: 21-07-15 03:16
--- 서버 버전: 10.4.19-MariaDB
--- PHP 버전: 7.3.28
+-- Host: localhost
+-- 생성 시간: 21-07-30 14:35
+-- 서버 버전: 5.7.34
+-- PHP 버전: 7.3.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 데이터베이스: `test`
+-- 데이터베이스: `ssongd`
 --
 
 -- --------------------------------------------------------
@@ -29,6 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `zay_pro` (
   `ZAY_pro_idx` int(11) NOT NULL COMMENT '상품고유번호',
+  `ZAY_pro_like` int(11) NOT NULL COMMENT '좋아요 갯수',
   `ZAY_pro_cate` varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '상품분류',
   `ZAY_pro_name` varchar(30) CHARACTER SET utf8 NOT NULL COMMENT '상품이름',
   `ZAY_pro_pri` varchar(30) CHARACTER SET utf8 NOT NULL COMMENT '상품가격',
