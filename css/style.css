@@ -236,3 +236,37 @@ section.pro_insert{background: #e9eef5;}
 .pro_search span.search_btns button{width:80%; margin:10px 0; background:#59ab6e; color:#fff; border-radius: 3px;}
 
 .pro_search .total_pri{width:100%; height:auto; margin-top:10px; text-align: right;}
+
+/* Admin page Style Code */
+.admin .admin_tabs{width:100%;height:auto;text-align:center;}
+.admin .admin_tabs button{background:#59ab6e;color:#fff;}
+
+.admin .admin_panels{width:100%;height:auto;margin-top:20px;}
+.admin .pro_admin{width:100%;height:auto;background:#efefef;padding:10px;}
+.admin .pro_insert_form{display:flex;flex-direction:column;}
+.admin .category{display:flex;}
+.admin .category em{background:#59ab6e;color:#fff;padding:5px 10px;}
+.admin .category select{border:1px solid #59ab6e;padding:5px;margin-left:5px;outline:0;}
+
+.admin .short_txt{display:flex;justify-content: space-between;margin-top:5px;}
+.admin .short_txt p{width:calc(25% - 5px); display:flex;justify-content: space-between;}
+.admin .short_txt p label{width:30%;background:#59ab6e;color:#fff;width:30%;display:flex;align-items:center;justify-content:center;}
+.admin .short_txt p input{width:calc(70% - 5px);border:1px solid #59ab6e;}
+.admin .img_input{display:flex;}
+.admin .desc_input{margin-top:5px;width:100%;height:150px;border:1px solid #59ab6e;}
+.admin .desc_input textarea{width:100%;height:100%;}
+
+.admin .img_input{display:flex;width:100%;margin-top:5px;justify-content:space-between;;}
+.admin .img_input .upload_box{width:calc(50% - 2.5px);}
+.admin .input_controll{position:relative;}
+
+.admin .upload_name{width:100%;border:1px solid #3e8550;}
+.admin .input_img_tit{width:100%;height:auto;padding:10px 0;text-align:center;border:1px solid #59ab6e;color:#fff;background:#59ab6e;display:block;margin-top:5px;transition:all 0.4s;}
+.admin .input_img_tit:hover{background:#fff; color:#59ab6e;}
+.admin .upload_hidden{position:absolute;width:1px;height:1px;overflow:hidden;padding:0;}
+
+.admin .img_wrap{width:100%;height:auto;padding:5px;border:1px solid #59ab6e;margin-top:5px;}
+.admin .img_wrap img{width:100%;}
+
+
+.admin .mem_admin{width:100%;height:100px;background:lightskyblue;}
