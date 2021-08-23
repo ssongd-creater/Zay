@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<?php include $_SERVER["DOCUMENT_ROOT"]."/zay/include/header.php";?>
+<?php include $_SERVER["DOCUMENT_ROOT"]."/dy_pofol/include/header.php";?>
 
 <section class="community">
     <div class="center">

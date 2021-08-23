@@ -28,7 +28,7 @@
       <div class="tit_box">
         <h2>Our Product</h2>
         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt<br>mollit anim id est laborum.</p>
-        </div>
+      </div>
 
         <div class="shop_btns">
           <div class="tabs">

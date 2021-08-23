@@ -23,6 +23,8 @@ header .login_info a{padding:0 15px; color:#555555; font-weight: 400;}
 header .login_info a:nth-child(2){border-left:1px solid #212529}
 header .login_info a:nth-child(3){padding-right: 0; width:30px; height:30px; overflow: hidden; border-radius: 50%; padding-left:0;}
 header .login_info img{width:100%;}
+header .login_info a.admin_link{display:flex;align-items:center;justify-content: center;}
+header .login_info a.admin_link i.fa{font-size:20px;}
 
 header.stick{padding:12px 0; z-index:9999; background:#fff;}
 header.stick .logo a{font-size:35px;}

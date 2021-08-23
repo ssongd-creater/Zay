@@ -50,6 +50,7 @@ if(!$id_match){
     $_SESSION['userid'] = $login_row['ZAY_mem_id'];
     $_SESSION['userprofile'] = $login_row['ZAY_mem_pf'];
     $_SESSION['useridx'] = $login_row['ZAY_mem_idx'];
+    $_SESSION['userlevel'] = $login_row['ZAY_mem_level'];
     //만든 session을 저장한다.
 
     echo"
