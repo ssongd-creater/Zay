@@ -276,15 +276,16 @@ section.pro_insert{background: #e9eef5;}
 .admin .mem_admin .mem_admin_con{display:flex;align-items:center;padding:10px; border-bottom: 1px solid #59ab6e;;}
 
 /* .admin .mem_admin .mem_admin_form{width:100%;display:flex;align-items:center;} */
-.admin .mem_admin ul>li span{text-align:center;;}
-.admin .mem_admin ul>li span:nth-child(1){width:10%}
-.admin .mem_admin ul>li span:nth-child(2){width:10%}
-.admin .mem_admin ul>li span:nth-child(3){width:25%}
-.admin .mem_admin ul>li span:nth-child(4){width:25%}
-.admin .mem_admin ul>li span:nth-child(5){width:15%}
-.admin .mem_admin ul>li span:nth-child(6){width:15%}
+.admin .mem_admin ul li span{text-align:center;;}
+.admin .mem_admin ul li span:nth-child(1){width:10%}
+.admin .mem_admin ul li span:nth-child(2){width:10%}
+.admin .mem_admin ul li span:nth-child(3){width:25%}
+.admin .mem_admin ul li span:nth-child(4){width:25%}
+.admin .mem_admin ul li span:nth-child(5){width:15%}
+.admin .mem_admin ul li span:nth-child(6){width:15%}
 
 .admin .mem_admin .mem_admin_con span:nth-child(5) input{text-align:center;width:80%;padding:5px 0;border:1px solid #59ab6e;}
 .admin .mem_admin .mem_admin_con span:nth-child(6) button{background:#59ab6e;color:#fff;padding:5px 20px; font-size:12px;;}
 
-
+.admin .select_del_btn{width:100%;height:auto;display:flex;justify-content:center;margin-top:10px;}
+.admin .select_del_btn button{background:#59ab6e;color:#fff;padding:8px 20px;}

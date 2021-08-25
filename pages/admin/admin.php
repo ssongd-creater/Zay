@@ -132,6 +132,17 @@
 
   <?php include $_SERVER['DOCUMENT_ROOT']."/zay/include/footer.php";?>
 
+  <?php
+    if(!$userid || $userlevel != 1){
+      echo "
+      <script>
+      alert('잘못된 접근입니다');
+      location.href='/zay/index.php';
+      </script>
+      ";
+    }
+  ?>
+
 
   <!-- jQuery Framework Load -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
